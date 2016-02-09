@@ -6,9 +6,14 @@ public class ScrabbleScoreTest {
 
   @Test
   public void scrabbleScore_returnsAScrabbleScoreForALetter_1() {
-    App app = new App();
-    Integer score = 1;
-    assertEquals(score, app.scrabbleScore("a"));
+    ScrabbleScore scrabbleScore = new ScrabbleScore();
+    int score = 1;
+    assertEquals(score, scrabbleScore.inputWord("a"));
   }
-
+  @Test
+  public void scrabbleScore_returnScore_3() {
+    ScrabbleScore scrabbleScore = new ScrabbleScore();
+    int score = 3;
+    assertEquals(score, scrabbleScore.inputWord("aei"));
+  }
 }
